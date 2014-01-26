@@ -12,8 +12,13 @@
 		10440FBB188C0AB30074237B /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10440FB9188C0AB30074237B /* libgtest_main.a */; };
 		10440FBC188C0AB30074237B /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10440FBA188C0AB30074237B /* libgtest.a */; };
 		10440FC4188C0B490074237B /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 10440FC0188C0B120074237B /* libstdc++.6.0.9.dylib */; };
+		10A66F8518954B5B00F56295 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A66F8418954B5B00F56295 /* OpenGLES.framework */; };
+		10A66F8A18954B6A00F56295 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A66F8918954B6A00F56295 /* UIKit.framework */; };
+		10A66F9218954BCC00F56295 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A66F9118954BCC00F56295 /* CoreGraphics.framework */; };
+		10A66F9418954BD900F56295 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A66F9318954BD900F56295 /* QuartzCore.framework */; };
+		10A66F9618954BE800F56295 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A66F9518954BE700F56295 /* CoreMotion.framework */; };
+		10A66F9818954BF700F56295 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A66F9718954BF700F56295 /* libz.dylib */; };
 		1AC6FB2E180E99EB004C840B /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0D180E9839004C840B /* libbox2d iOS.a */; };
-		1AC6FB2F180E99EB004C840B /* libchipmunk iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0B180E9839004C840B /* libchipmunk iOS.a */; };
 		1AC6FB30180E99EB004C840B /* libcocos2dx iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2dx iOS.a */; };
 		1AC6FB31180E99EB004C840B /* libcocos2dx-extensions iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB09180E9839004C840B /* libcocos2dx-extensions iOS.a */; };
 		1AC6FB32180E99EB004C840B /* libCocosDenshion iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0F180E9839004C840B /* libCocosDenshion iOS.a */; };
@@ -154,6 +159,15 @@
 		10440FBD188C0AFB0074237B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		10440FC0188C0B120074237B /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		10440FC1188C0B120074237B /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		10A66F8418954B5B00F56295 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		10A66F8918954B6A00F56295 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		10A66F8B18954B7600F56295 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
+		10A66F8D18954B9200F56295 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		10A66F8F18954BB500F56295 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		10A66F9118954BCC00F56295 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		10A66F9318954BD900F56295 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		10A66F9518954BE700F56295 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		10A66F9718954BF700F56295 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = ../Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		1AFAF8B416D35DE700DB1158 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../Classes/AppDelegate.h; sourceTree = "<group>"; };
@@ -203,8 +217,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A66F9818954BF700F56295 /* libz.dylib in Frameworks */,
+				10A66F9618954BE800F56295 /* CoreMotion.framework in Frameworks */,
+				10A66F9418954BD900F56295 /* QuartzCore.framework in Frameworks */,
+				10A66F9218954BCC00F56295 /* CoreGraphics.framework in Frameworks */,
+				10A66F8A18954B6A00F56295 /* UIKit.framework in Frameworks */,
+				10A66F8518954B5B00F56295 /* OpenGLES.framework in Frameworks */,
 				1AC6FB2E180E99EB004C840B /* libbox2d iOS.a in Frameworks */,
-				1AC6FB2F180E99EB004C840B /* libchipmunk iOS.a in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2dx iOS.a in Frameworks */,
 				1AC6FB31180E99EB004C840B /* libcocos2dx-extensions iOS.a in Frameworks */,
 				1AC6FB32180E99EB004C840B /* libCocosDenshion iOS.a in Frameworks */,
@@ -276,6 +295,15 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				10A66F9718954BF700F56295 /* libz.dylib */,
+				10A66F9518954BE700F56295 /* CoreMotion.framework */,
+				10A66F9318954BD900F56295 /* QuartzCore.framework */,
+				10A66F9118954BCC00F56295 /* CoreGraphics.framework */,
+				10A66F8F18954BB500F56295 /* Foundation.framework */,
+				10A66F8D18954B9200F56295 /* AudioToolbox.framework */,
+				10A66F8B18954B7600F56295 /* OpenAL.framework */,
+				10A66F8918954B6A00F56295 /* UIKit.framework */,
+				10A66F8418954B5B00F56295 /* OpenGLES.framework */,
 				10440FC0188C0B120074237B /* libstdc++.6.0.9.dylib */,
 				10440FC1188C0B120074237B /* libstdc++.6.dylib */,
 				10440FBD188C0AFB0074237B /* libstdc++.dylib */,
