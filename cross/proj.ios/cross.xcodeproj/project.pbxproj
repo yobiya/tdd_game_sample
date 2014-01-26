@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		100A1927188BF8EC00AD4022 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 100A1926188BF8EC00AD4022 /* main.cpp */; };
 		100A1929188BF8EC00AD4022 /* UnitTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 100A1928188BF8EC00AD4022 /* UnitTest.1 */; };
+		101495C718954DF4006FD2CC /* CollisionTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 101495C618954DF4006FD2CC /* CollisionTest.cpp */; };
+		101495CB18954E57006FD2CC /* CollisionDetection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 101495C918954E57006FD2CC /* CollisionDetection.cpp */; };
+		101495CC18954E57006FD2CC /* CollisionDetection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 101495C918954E57006FD2CC /* CollisionDetection.cpp */; };
 		10440FBB188C0AB30074237B /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10440FB9188C0AB30074237B /* libgtest_main.a */; };
 		10440FBC188C0AB30074237B /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10440FBA188C0AB30074237B /* libgtest.a */; };
 		10440FC4188C0B490074237B /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 10440FC0188C0B120074237B /* libstdc++.6.0.9.dylib */; };
@@ -152,8 +155,9 @@
 		100A1924188BF8EC00AD4022 /* UnitTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		100A1926188BF8EC00AD4022 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		100A1928188BF8EC00AD4022 /* UnitTest.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = UnitTest.1; sourceTree = "<group>"; };
-		100A194D188BFDFE00AD4022 /* gtest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gtest.framework; path = ../libs/gtest.framework; sourceTree = "<group>"; };
-		100A194F188BFE6600AD4022 /* gtest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gtest.framework; path = ../Library/Frameworks/gtest.framework; sourceTree = "<group>"; };
+		101495C618954DF4006FD2CC /* CollisionTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionTest.cpp; sourceTree = "<group>"; };
+		101495C918954E57006FD2CC /* CollisionDetection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionDetection.cpp; sourceTree = "<group>"; };
+		101495CA18954E57006FD2CC /* CollisionDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionDetection.h; sourceTree = "<group>"; };
 		10440FB9188C0AB30074237B /* libgtest_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest_main.a; path = ../Library/lib/libgtest_main.a; sourceTree = "<group>"; };
 		10440FBA188C0AB30074237B /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = ../Library/lib/libgtest.a; sourceTree = "<group>"; };
 		10440FBD188C0AFB0074237B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
@@ -251,15 +255,27 @@
 		100A1925188BF8EC00AD4022 /* UnitTest */ = {
 			isa = PBXGroup;
 			children = (
+				101495C618954DF4006FD2CC /* CollisionTest.cpp */,
 				100A1926188BF8EC00AD4022 /* main.cpp */,
 				100A1928188BF8EC00AD4022 /* UnitTest.1 */,
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
 		};
+		101495C818954E57006FD2CC /* Stage */ = {
+			isa = PBXGroup;
+			children = (
+				101495C918954E57006FD2CC /* CollisionDetection.cpp */,
+				101495CA18954E57006FD2CC /* CollisionDetection.h */,
+			);
+			name = Stage;
+			path = ../Classes/Stage;
+			sourceTree = "<group>";
+		};
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				101495C818954E57006FD2CC /* Stage */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
@@ -309,8 +325,6 @@
 				10440FBD188C0AFB0074237B /* libstdc++.dylib */,
 				10440FB9188C0AB30074237B /* libgtest_main.a */,
 				10440FBA188C0AB30074237B /* libgtest.a */,
-				100A194F188BFE6600AD4022 /* gtest.framework */,
-				100A194D188BFDFE00AD4022 /* gtest.framework */,
 				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
 				15AA9C4015B7EC450033D6C2 /* Classes */,
 				100A1925188BF8EC00AD4022 /* UnitTest */,
@@ -524,6 +538,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				101495CC18954E57006FD2CC /* CollisionDetection.cpp in Sources */,
+				101495C718954DF4006FD2CC /* CollisionTest.cpp in Sources */,
 				100A1927188BF8EC00AD4022 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				101495CB18954E57006FD2CC /* CollisionDetection.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
