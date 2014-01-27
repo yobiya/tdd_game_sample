@@ -19,8 +19,8 @@ namespace Cross {
  * @param w 幅
  * @param h 高さ
  */
-CollisionArea::CollisionArea(float x, float y, float w, float h)
- : _x(x), _y(y), _w(w), _h(h)
+CollisionArea::CollisionArea(float x_, float y_, float w_, float h_)
+ : x(x_), y(y_), w(w_), h(h_)
 {
 }
 
@@ -34,7 +34,26 @@ CollisionArea::CollisionArea(float x, float y, float w, float h)
  * @retval false 衝突していない
  */
 bool CollisionDetection::isCollide(CollisionArea *lhs, CollisionArea *rhs) {
-	return false;
+	if(lhs == 0 || rhs == 0) {
+		return false;
+	}
+	
+	const float selfLeft = lhs->x;
+	const float selfTop = lhs->y;
+	const float selfRight = selfLeft + lhs->w;
+	const float selfBottom = selfTop + lhs->h;
+	const float otherLeft = rhs->x;
+	const float otherTop = rhs->y;
+	const float otherRight = otherLeft + rhs->w;
+	const float otherBottom = otherTop + rhs->h;
+	
+	if(selfLeft > otherRight) {	return false;	}	// 判定対象の範囲は自分の範囲よりも左側にある
+	if(selfTop > otherBottom) {	return false;	}	// 判定対象の範囲は自分の範囲よりも上側にある
+	if(selfRight < otherLeft) {	return false;	}	// 判定対象の範囲は自分の範囲よりも右側にある
+	if(selfBottom < otherTop) {	return false;	}	// 判定対象の範囲は自分の範囲よりも下側にある
+	
+	// 判定対象の範囲は自分と重なっている部分がある
+	return true;
 }
 
 	}	// namespace Stage

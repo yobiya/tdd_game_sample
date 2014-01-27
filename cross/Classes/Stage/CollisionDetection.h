@@ -17,12 +17,12 @@ namespace Cross {
 /**
  * @brief 衝突範囲
  */
-class CollisionArea {
-private:
-	float _x, _y, _w, _h;
+struct CollisionArea {
+public:
+	float x, y, w, h;
 
 public:
-	CollisionArea(float x, float y, float w, float h);
+	CollisionArea(float x_, float y_, float w_, float h);
 };
 
 /**
