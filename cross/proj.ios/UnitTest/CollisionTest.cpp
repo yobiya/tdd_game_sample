@@ -13,12 +13,12 @@
 using namespace Cross::Stage;
 
 TEST(Collision, isCollide) {
-	CollisionArea *area1 = new CollisionArea(0.0f, 0.0f, 10.0f, 10.0f);
-	CollisionArea *area2 = new CollisionArea(5.0f, 5.0f, 10.0f, 10.0f);
-	CollisionArea *area3 = new CollisionArea(-15.0f, -5.0f, 10.0f, 10.0f);
-	CollisionArea *area4 = new CollisionArea(-15.0f, -5.0f, 10.0f, 10.0f);
-	CollisionArea *area5 = new CollisionArea(10.0f, 10.0f, 20.0f, 20.0f);
-	CollisionArea *area6 = new CollisionArea(12.0f, 12.0f, 10.0f, 10.0f);
+	CollisionArea area1(0.0f, 0.0f, 10.0f, 10.0f);
+	CollisionArea area2(5.0f, 5.0f, 10.0f, 10.0f);
+	CollisionArea area3(-15.0f, -5.0f, 10.0f, 10.0f);
+	CollisionArea area4(-15.0f, -5.0f, 10.0f, 10.0f);
+	CollisionArea area5(10.0f, 10.0f, 20.0f, 20.0f);
+	CollisionArea area6(12.0f, 12.0f, 10.0f, 10.0f);
 
 	ASSERT_TRUE(CollisionDetection::isCollide(area1, area2));	// 一部が重なっている
 	ASSERT_FALSE(CollisionDetection::isCollide(area1, area3));	// 重なっていない

@@ -30,7 +30,7 @@ public:
  */
 class CollisionDetection {
 public:
-	static bool isCollide(CollisionArea *lhs, CollisionArea *rhs);
+	static bool isCollide(CollisionArea &lhs, CollisionArea &rhs);
 };
 
 	}	// namespace Stage

@@ -33,19 +33,15 @@ CollisionArea::CollisionArea(float x_, float y_, float w_, float h_)
  * @retval true 衝突している
  * @retval false 衝突していない
  */
-bool CollisionDetection::isCollide(CollisionArea *lhs, CollisionArea *rhs) {
-	if(lhs == 0 || rhs == 0) {
-		return false;
-	}
-	
-	const float selfLeft = lhs->x;
-	const float selfTop = lhs->y;
-	const float selfRight = selfLeft + lhs->w;
-	const float selfBottom = selfTop + lhs->h;
-	const float otherLeft = rhs->x;
-	const float otherTop = rhs->y;
-	const float otherRight = otherLeft + rhs->w;
-	const float otherBottom = otherTop + rhs->h;
+bool CollisionDetection::isCollide(CollisionArea &lhs, CollisionArea &rhs) {
+	const float selfLeft = lhs.x;
+	const float selfTop = lhs.y;
+	const float selfRight = selfLeft + lhs.w;
+	const float selfBottom = selfTop + lhs.h;
+	const float otherLeft = rhs.x;
+	const float otherTop = rhs.y;
+	const float otherRight = otherLeft + rhs.w;
+	const float otherBottom = otherTop + rhs.h;
 	
 	if(selfLeft > otherRight) {	return false;	}	// 判定対象の範囲は自分の範囲よりも左側にある
 	if(selfTop > otherBottom) {	return false;	}	// 判定対象の範囲は自分の範囲よりも上側にある
