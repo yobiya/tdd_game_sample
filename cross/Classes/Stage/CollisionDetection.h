@@ -10,27 +10,29 @@
 #define __cross__CollisionManager__
 
 #include <iostream>
+#include <forward_list>
+
+#include "CollisionArea.h"
 
 namespace Cross {
 	namespace Stage {
 
 /**
- * @brief 衝突範囲
- */
-struct CollisionArea {
-public:
-	float x, y, w, h;
-
-public:
-	CollisionArea(float x_, float y_, float w_, float h);
-};
-
-/**
  * @brief 衝突判定クラス
  */
 class CollisionDetection {
-public:
-	static bool isCollide(CollisionArea &lhs, CollisionArea &rhs);
+	private:
+	std::forward_list<CollisionArea::Ptr> _collisionList;
+
+	public:
+		CollisionDetection();
+
+		void add(CollisionArea::Ptr collision);
+		void remove(CollisionArea::Ptr collision);
+		int count();
+		void ditect();
+
+		static bool isCollide(CollisionArea &lhs, CollisionArea &rhs);
 };
 
 	}	// namespace Stage

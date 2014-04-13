@@ -15,6 +15,10 @@
 		10440FBB188C0AB30074237B /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10440FB9188C0AB30074237B /* libgtest_main.a */; };
 		10440FBC188C0AB30074237B /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10440FBA188C0AB30074237B /* libgtest.a */; };
 		10440FC4188C0B490074237B /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 10440FC0188C0B120074237B /* libstdc++.6.0.9.dylib */; };
+		1057983E18FADF51009085F0 /* CollisionEventListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1057983C18FADF51009085F0 /* CollisionEventListener.cpp */; };
+		1057983F18FADF51009085F0 /* CollisionEventListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1057983C18FADF51009085F0 /* CollisionEventListener.cpp */; };
+		1057984518FADF68009085F0 /* CollisionArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1057984318FADF68009085F0 /* CollisionArea.cpp */; };
+		1057984618FADF68009085F0 /* CollisionArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1057984318FADF68009085F0 /* CollisionArea.cpp */; };
 		10A66F8518954B5B00F56295 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A66F8418954B5B00F56295 /* OpenGLES.framework */; };
 		10A66F8A18954B6A00F56295 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A66F8918954B6A00F56295 /* UIKit.framework */; };
 		10A66F9218954BCC00F56295 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A66F9118954BCC00F56295 /* CoreGraphics.framework */; };
@@ -163,6 +167,10 @@
 		10440FBD188C0AFB0074237B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		10440FC0188C0B120074237B /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		10440FC1188C0B120074237B /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		1057983C18FADF51009085F0 /* CollisionEventListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CollisionEventListener.cpp; path = ../../../../../application/cross/Classes/Stage/CollisionEventListener.cpp; sourceTree = "<group>"; };
+		1057983D18FADF51009085F0 /* CollisionEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollisionEventListener.h; path = ../../../../../application/cross/Classes/Stage/CollisionEventListener.h; sourceTree = "<group>"; };
+		1057984318FADF68009085F0 /* CollisionArea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CollisionArea.cpp; path = ../../../../../application/cross/Classes/Stage/CollisionArea.cpp; sourceTree = "<group>"; };
+		1057984418FADF68009085F0 /* CollisionArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollisionArea.h; path = ../../../../../application/cross/Classes/Stage/CollisionArea.h; sourceTree = "<group>"; };
 		10A66F8418954B5B00F56295 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
 		10A66F8918954B6A00F56295 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		10A66F8B18954B7600F56295 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
@@ -265,6 +273,10 @@
 		101495C818954E57006FD2CC /* Stage */ = {
 			isa = PBXGroup;
 			children = (
+				1057984318FADF68009085F0 /* CollisionArea.cpp */,
+				1057984418FADF68009085F0 /* CollisionArea.h */,
+				1057983C18FADF51009085F0 /* CollisionEventListener.cpp */,
+				1057983D18FADF51009085F0 /* CollisionEventListener.h */,
 				101495C918954E57006FD2CC /* CollisionDetection.cpp */,
 				101495CA18954E57006FD2CC /* CollisionDetection.h */,
 			);
@@ -541,6 +553,8 @@
 				101495CC18954E57006FD2CC /* CollisionDetection.cpp in Sources */,
 				101495C718954DF4006FD2CC /* CollisionTest.cpp in Sources */,
 				100A1927188BF8EC00AD4022 /* main.cpp in Sources */,
+				1057983F18FADF51009085F0 /* CollisionEventListener.cpp in Sources */,
+				1057984618FADF68009085F0 /* CollisionArea.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,11 +563,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				101495CB18954E57006FD2CC /* CollisionDetection.cpp in Sources */,
+				1057983E18FADF51009085F0 /* CollisionEventListener.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
+				1057984518FADF68009085F0 /* CollisionArea.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,15 +13,41 @@ namespace Cross {
 
 /**
  * @brief コンストラクタ
- *
- * @param x X座標
- * @param y Y座標
- * @param w 幅
- * @param h 高さ
  */
-CollisionArea::CollisionArea(float x_, float y_, float w_, float h_)
- : x(x_), y(y_), w(w_), h(h_)
-{
+CollisionDetection::CollisionDetection() {
+}
+
+/**
+ * @brief コリジョンを登録
+ *
+ * @param collision コリジョン
+ */
+void CollisionDetection::add(CollisionArea::Ptr collision) {
+	_collisionList.push_front(collision);
+}
+
+/**
+ * @brief コリジョンの登録を削除
+ *
+ * @param collision コリジョン
+ */
+void CollisionDetection::remove(CollisionArea::Ptr collision) {
+	_collisionList.remove(collision);
+}
+
+/**
+ * @brief 登録されているコリジョンの数を取得
+ *
+ * @return 登録されているコリジョンの数
+ */
+int CollisionDetection::count() {
+	return static_cast<int>(distance(_collisionList.begin(), _collisionList.end()));
+}
+
+/**
+ * @brief 登録されているコリジョンの衝突判定を行う
+ */
+void CollisionDetection::ditect() {
 }
 
 /**
